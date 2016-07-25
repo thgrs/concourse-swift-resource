@@ -77,7 +77,7 @@ Given a path specified by `from`, upload it to the Swift container. The path mus
     auth_url: http://somewhere.at.keystone:5000/v3
     domain: somedomain
     container: mycontainer
-    regex: myapp-([.0-9])+\.tgz
+    regex: myapp-([.0-9])\.tgz
 ```
 
 ### Plan
@@ -89,6 +89,6 @@ Given a path specified by `from`, upload it to the Swift container. The path mus
 ``` yaml
 - put: myapp
   params:
-    from: a-task/build/path/file-(.*).tgz
+    from: a-task/build/path/myapp-(.*).tgz
 ```
 
